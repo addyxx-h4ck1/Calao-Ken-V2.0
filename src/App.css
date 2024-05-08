@@ -1,0 +1,24 @@
+body {
+  display: grid;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#root {
+  max-width: 1500px;
+  justify-self: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 799px) {
+  .top-div {
+    justify-content: space-between;
+  }
+}
+
+/* drop down */
+.dropdown-content {
+  width: 250px;
+  line-height: 2rem;
+}
+.sidebar {
+  width: 300px;
+}

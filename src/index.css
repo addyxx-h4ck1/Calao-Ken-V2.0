@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dropdown-link {
+  @apply p-2 px-5 rounded-md hover:bg-blue-600 hover:text-white hover:duration-500;
+}
+
+@layer components {
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    transition: all ease-out 1s;
+  }
+}
