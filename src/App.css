@@ -16,9 +16,65 @@ body {
 
 /* drop down */
 .dropdown-content {
-  width: 250px;
+  width: 230px;
   line-height: 2rem;
 }
 .sidebar {
-  width: 300px;
+  width: 250px;
+}
+.slider {
+  height: 80vh;
+  background-image: url(https://images.unsplash.com/photo-1554990772-0bea55d510d5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider-wrapper {
+  background-color: #00000081;
+}
+
+.about-images img {
+  box-shadow: 20px 20px 10px #242424;
+}
+@media screen and (max-width: 1200px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .about-text {
+    margin-left: 0;
+    width: 80%;
+    text-align: left;
+  }
+  .about-section img {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about-text {
+    width: 100%;
+    text-align: left;
+  }
+  .about-text h2 {
+    font-size: 30px;
+    line-height: 2.5rem;
+  }
+}
+
+.acknowledgement h2::after,
+.safari-plans h2::after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 60px;
+  background: royalblue;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+}
+
+.why-choose-us-icon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
 }

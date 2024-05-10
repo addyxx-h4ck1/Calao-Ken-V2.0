@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/navbar/Sidebar'
+
 function App() {
   const [showSideBar, setShowSideBar] = useState(false)
   const handleSideBar = () => {
@@ -14,9 +15,9 @@ function App() {
 
   return (
     <>
-      <div className="top-div w-full py-5 flex justify-around px-4 portrait:justify-between portrait:space-x-5 text-nowrap border-b-2">
+      <div className="top-div py-5 px-4 flex justify-around portrait:justify-between portrait:space-x-5 text-nowrap border-b-2  portrait:text-sm portrait:sticky portrait:top-0 z-50 bg-white ">
         <div className="left-div flex space-x-5 items-center">
-          <a href="tel:+2547682999380">
+          <a href="tel:+2547682999380" className="portrait:hidden">
             <i className="fa fa-phone"></i> +2547682999380
           </a>
           <a href="mailto:mail@gmail.com">
@@ -56,10 +57,10 @@ function App() {
             <i className="fa fa-bars"></i>
           </button>
         </div>
+        {showSideBar ? <Sidebar closeFunction={closeSideBar} /> : null}
       </div>
       {/* navBAR */}
       <Navbar />
-      {showSideBar ? <Sidebar closeFunction={closeSideBar} /> : null}
     </>
   )
 }

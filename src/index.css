@@ -12,3 +12,38 @@
     transition: all ease-out 1s;
   }
 }
+
+@layer components {
+  .why-choose-us-icons {
+    width: 100%;
+    overflow: hidden;
+    gap: 1rem;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  }
+  .top-most-destinations {
+    width: 100%;
+    gap: 1px;
+    overflow: hidden;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  }
+  .destination img {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .destination:before {
+    content: '';
+    background: linear-gradient(to top, #000000e1, transparent);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    z-index: 1;
+  }
+  .rating span::before {
+    color: yellow;
+  }
+}

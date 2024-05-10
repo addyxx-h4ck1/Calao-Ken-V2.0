@@ -2,7 +2,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <>
-      <nav className="flex justify-around items-center py-3 z-50 portrait:hidden">
+      <nav className="flex z-50 justify-around sticky items-center py-1  portrait:hidden top-0 bg-white">
         {/* LOGO */}
         <img
           src="https://www.calaokenyasafaris.com/apple-touch-icon.png"
@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="dropdown inline-block bg-white relative">
             <button className="dropdown-action-btn mb-4 hover:text-blue-600">
               <font>
-                Safaris <i className="fa fa-caret-down"></i>
+                Safaris &nbsp; <i className="fa fa-caret-down"></i>
               </font>
             </button>
             <div className="dropdown-content  bg-white flex flex-col  rounded-lg shadow-2xl z-50 absolute hidden">
@@ -38,21 +38,21 @@ const Navbar = () => {
           <div className="dropdown inline-block bg-white relative">
             <button className="dropdown-action-btn mb-4 hover:text-blue-600">
               <font>
-                Follow Us <i className="fa fa-caret-down"></i>
+                Follow Us &nbsp; <i className="fa fa-caret-down"></i>
               </font>
             </button>
-            <div className="dropdown-content  bg-white  flex flex-col  rounded-lg shadow-2xl z-50 absolute hidden">
-              <a href="" className="dropdown-link">
-                10 day safari
+            <div className="dropdown-content py-3 bg-white  flex flex-col  rounded-lg shadow-2xl z-50 absolute hidden">
+              <a href="" className="dropdown-link text-red-600 text-xs">
+                <i className="fa-brands fa-instagram"> Instagram</i>
               </a>
-              <a href="" className="dropdown-link">
-                10 day safari
+              <a href="" className="dropdown-link  text-blue-400 text-xs">
+                <i className="fa-brands fa-facebook"> Facebook</i>
               </a>
-              <a href="" className="dropdown-link">
-                10 day safari
+              <a href="" className="dropdown-link  text-green-500 text-xs">
+                <i className="fa-brands fa-whatsapp"> whatsApp</i>
               </a>
-              <a href="" className="dropdown-link">
-                10 day safari
+              <a href="" className="dropdown-link  text-blue-500 text-xs">
+                <i className="fa-brands fa-linkedin"> LinkedIn</i>
               </a>
             </div>
           </div>
