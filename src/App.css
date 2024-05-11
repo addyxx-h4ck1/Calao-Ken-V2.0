@@ -1,7 +1,8 @@
 body {
   display: grid;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 #root {
   max-width: 1500px;
   justify-self: center;
@@ -19,16 +20,18 @@ body {
   width: 230px;
   line-height: 2rem;
 }
+
 .sidebar {
   width: 250px;
 }
+
 .slider {
-  height: 80vh;
   background-image: url(https://images.unsplash.com/photo-1554990772-0bea55d510d5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .slider-wrapper {
   background-color: #00000081;
 }
@@ -36,24 +39,29 @@ body {
 .about-images img {
   box-shadow: 20px 20px 10px #242424;
 }
+
 @media screen and (max-width: 1200px) {
   .about-section {
     flex-direction: column;
   }
+
   .about-text {
     margin-left: 0;
     width: 80%;
     text-align: left;
   }
+
   .about-section img {
     display: none;
   }
 }
+
 @media screen and (max-width: 700px) {
   .about-text {
     width: 100%;
     text-align: left;
   }
+
   .about-text h2 {
     font-size: 30px;
     line-height: 2.5rem;
@@ -73,8 +81,39 @@ body {
   bottom: 0;
 }
 
+.location-icon::after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background: rgb(251, 6, 47);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+}
+
 .why-choose-us-icon {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1rem;
+}
+
+.banner-A {
+  background-image: url(https://images.unsplash.com/photo-1669127300649-940337f1487e?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.banner-A:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-color: rgba(82, 114, 211, 0.778);
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }

@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import App from '../App'
+import Loading from '../components/navbar/Loading'
 const Shared = () => {
+  const [load, setLoad] = useState(false)
+  window.onload = () => {
+    setLoad(true)
+  }
   return (
-    <div>
-      <App />
-      <Outlet />
-    </div>
+    <>
+      {load ? (
+        <>
+          <App />
+          <Outlet />
+        </>
+      ) : (
+        <Loading />
+      )}
+    </>
   )
 }
 

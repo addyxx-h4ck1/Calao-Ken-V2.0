@@ -17,7 +17,7 @@ const placesToVisit = [
   },
   {
     img: 'https://cdn.getyourguide.com/img/tour/5d7a823b32e90.jpeg/97.jpg',
-    destination: 'Watamu',
+    destination: 'Mombasa Watamu',
   },
   {
     img: 'https://www.kenyawildlifetours.com/wp-content/uploads/2021/04/serengeti-national-park-1.jpg',
@@ -25,7 +25,7 @@ const placesToVisit = [
   },
   {
     img: 'https://www.kenyawildlifetours.com/wp-content/uploads/2021/04/serengeti-national-park-1.jpg',
-    destination: 'Serengeti National Park',
+    destination: 'Amboseli National Park',
   },
 ]
 export default placesToVisit

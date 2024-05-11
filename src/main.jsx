@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
@@ -30,8 +30,12 @@ const router = createBrowserRouter([
     ],
   },
 ])
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <Suspense fallback={<Loading />}>
-    <RouterProvider router={router} />
-  </Suspense>
-)
+
+const Main = () => {
+  const [loaded, setLoaded] = useState(true)
+  return <>{loaded ? <RouterProvider router={router} /> : <Loading />}</>
+}
+
+export default Main
+
+ReactDOM.createRoot(document.getElementById('root')).render(<Main />)

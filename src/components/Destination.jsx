@@ -1,9 +1,8 @@
 import React from 'react'
 
 const Destination = ({ ...el }) => {
-  console.log(el)
   return (
-    <div className="destination h-[250px] relative overflow-hidden ">
+    <div className="destination h-[250px] relative overflow-hidden portrait:h-[220px]">
       <img src={el.img} alt="" className="w-full h-full object-cover " />
       <div className="dest-content absolute bottom-[13px] z-[1] px-4">
         <div className="rating inline-block">
@@ -13,7 +12,9 @@ const Destination = ({ ...el }) => {
           <span className="fa fa-star checked"></span>
           <span className="fa fa-star checked"></span>
         </div>
-        <h3 className="font-semibold text-white text-xl">{el.destination}</h3>
+        <h3 className="font-semibold text-white text-xl portrait:text-sm">
+          {el.destination}
+        </h3>
       </div>
       <div className="destination-overlay w-full h-full absolute left-0 top-0 opacity-1 text-center  flex justify-center items-center bg-[#00000091] ">
         <a

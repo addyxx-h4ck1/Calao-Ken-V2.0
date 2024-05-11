@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  }
+}
+
 .dropdown-link {
   @apply p-2 px-5 rounded-md hover:bg-blue-600 hover:text-white hover:duration-500;
 }
@@ -21,6 +28,7 @@
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
   }
+
   .top-most-destinations {
     width: 100%;
     gap: 1px;
@@ -28,6 +36,15 @@
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
   }
+
+  .safari-listings {
+    width: 100%;
+    row-gap: 1rem;
+    overflow: hidden;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  }
+
   .destination img {
     position: relative;
     transition: all 0.5s ease-in-out;
@@ -35,7 +52,7 @@
 
   .destination:before {
     content: '';
-    background: linear-gradient(to top, #000000e1, transparent);
+    background: linear-gradient(to top, #000000bd, transparent);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -43,7 +60,90 @@
     height: 40%;
     z-index: 1;
   }
+
   .rating span::before {
-    color: yellow;
+    color: rgb(255, 149, 0);
   }
+
+  .safari-img:before {
+    content: "";
+    background: linear-gradient(to top, #000000a3, transparent);
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all ease-in-out 0.3s;
+
+  }
+
+  .safari-img {
+    transition: all .3s ease-in-out;
+  }
+
+  .safari-img img {
+    transition: all .3s ease-in-out;
+  }
+
+  .safari-parent:hover img {
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+  }
+
+  .safari-parent:hover .safari-img:before {
+    height: 100%;
+    transition: all .3s ease-in-out;
+  }
+
+  .ribbon::before,
+  .ribbon::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    border: 5px solid #666;
+  }
+
+  .ribbon span {
+    position: absolute;
+    display: block;
+    width: 225px;
+    padding: 12px 0;
+    background-color: royalblue;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font: 700 16px/1;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .ribbon-top-left {
+    top: -10px;
+    left: -10px;
+  }
+
+  .ribbon-top-left::before,
+  .ribbon-top-left::after {
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+
+  .ribbon-top-left::before {
+    top: 0;
+    right: 0;
+  }
+
+  .ribbon-top-left::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  .ribbon-top-left span {
+    right: -25px;
+    top: 40px;
+    transform: rotate(-45deg);
+  }
+
 }
