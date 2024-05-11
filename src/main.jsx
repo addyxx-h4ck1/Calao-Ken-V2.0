@@ -1,14 +1,13 @@
-import React, { Suspense, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
+import { useEffect, useState, lazy } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
-import Error from './pages/Error.jsx'
-import About from './pages/About.jsx'
-import Shared from './pages/Shared.jsx'
-import Contact from './pages/Contact.jsx'
-import Home from './pages/Home.jsx'
-import Loading from './components/navbar/Loading.jsx'
-
+const Error = lazy(() => import('./pages/Error.jsx'))
+const About = lazy(() => import('./pages/About.jsx'))
+const Shared = lazy(() => import('./pages/Shared.jsx'))
+const Contact = lazy(() => import('./pages/Contact.jsx'))
+const Home = lazy(() => import('./pages/Home.jsx'))
+const Loading = lazy(() => import('./components/navbar/Loading.jsx'))
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,7 +31,13 @@ const router = createBrowserRouter([
 ])
 
 const Main = () => {
-  const [loaded, setLoaded] = useState(true)
+  const [loaded, setLoaded] = useState(false)
+  useEffect(() => {
+    setLoaded(false)
+    setTimeout(() => {
+      setLoaded(true)
+    }, 5000)
+  }, [])
   return <>{loaded ? <RouterProvider router={router} /> : <Loading />}</>
 }
 

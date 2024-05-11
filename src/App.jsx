@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className="top-div py-5 px-4 flex justify-around portrait:justify-between portrait:space-x-5 text-nowrap border-b-2  portrait:text-sm portrait:sticky portrait:top-0 z-50 bg-white ">
+      <div className="top-div py-5 px-4 flex justify-around portrait:justify-between portrait:space-x-5 text-nowrap border-b-2  portrait:text-sm portrait:sticky portrait:top-0 z-50 bg-white w-full">
         <div className="left-div flex space-x-5 items-center">
           <a href="tel:+2547682999380" className="portrait:hidden">
             <i className="fa fa-phone"></i> +2547682999380
@@ -49,9 +49,9 @@ function App() {
             <button>Register</button>
           </div>
         </div>
-        <div className="humbugger-menu">
+        <div className="humbugger-menu hidden portrait:block">
           <button
-            className="py-2 px-6 bg-blue-600 rounded hidden portrait:block"
+            className="py-2 px-6 bg-blue-600 rounded "
             onClick={handleSideBar}
           >
             <i className="fa fa-bars"></i>

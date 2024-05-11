@@ -62,7 +62,7 @@ const Navbar = () => {
           </a>
           <a
             href=""
-            className="py-2 mb-4 px-5 bg-blue-600 rounded-lg text-white hover:border-2 hover:bg-transparent hover:text-blue-600 hover:border-blue-600 hover:duration-700"
+            className="py-2 mb-4 px-5 bg-blue-600 rounded-lg text-white hover:border-2 hover:bg-transparent hover:text-blue-600 hover:border-blue-600 hover:duration-700 duration-700"
           >
             Book
           </a>
