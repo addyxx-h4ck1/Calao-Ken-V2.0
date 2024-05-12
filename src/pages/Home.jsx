@@ -9,7 +9,7 @@ const Home = () => {
   const swiper = useSwiper()
   return (
     <>
-      <section className="slider w-full h-[80vh] mb-[2rem] portrait:h-[300px]">
+      <section className="slider w-full h-[80vh] mb-[2rem] portrait:h-[300px] bg-black">
         <div className="slider-wrapper h-full w-full portrait:h-[300px] flex justify-center items-center flex-col gap-6">
           <h1 className="capitalize portrait:text-3xl portrait:w-[90%] text-6xl font-bold text-white w-[70%] text-center">
             your adventure, wonderful travel calls fast
@@ -159,8 +159,45 @@ const Home = () => {
           <i className="fa fa-caret-right"></i>
         </button>
         <article className="relative overflow-hidden">
+          {/* SLIDES */}
           <Slider />
         </article>
+      </section>
+      {/* PROMO */}
+      <section className="banner-promo flex flex-col justify-center items-center my-6 ">
+        <div className="promo-wrapper flex rounded-2xl px-2">
+          <div className="promo-text w-[50%] bg-[#242424] text-white flex flex-col justify-center items-center px-4 py-8 rounded-tl-2xl rounded-bl-2xl text-center">
+            <h2 className="text-5xl font-black text-center mb-4 leading-[4rem] ">
+              SUMMER SPECIAL UPTO <span className="text-blue-600">25%</span> OFF
+            </h2>
+            <p className="font-semibold text-xl">
+              SPEND THE BEST VACTION WITH US{' '}
+            </p>
+            <p className="mb-4 text-xl">The Nights Of Thailand</p>
+            <a
+              href=""
+              className="py-3 mb-4 px-8 bg-transparent rounded-lg  text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:duration-700 duration-700 ease-in-out"
+            >
+              Book Now
+            </a>
+          </div>
+          <img
+            src="https://www.congosafaristours.com/wp-content/uploads/2020/10/Nairobi-National-Park.jpg"
+            alt=""
+            className="w-[50%] object-cover rounded-tr-2xl rounded-br-2xl"
+          />
+        </div>
+      </section>
+      {/* REVIEWS */}
+      <section className="reviews my-3 flex flex-col justify-center items-center">
+        <h2 className="text-3xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-xl">
+          Top Tour Reviews
+        </h2>
+        <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-sm px-2">
+          Lorem Ipsum is simply dummy text the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
       </section>
     </>
   )
