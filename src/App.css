@@ -69,7 +69,8 @@ body {
 }
 
 .acknowledgement h2::after,
-.safari-plans h2::after {
+.safari-plans h2::after,
+.slider-parent h2::after {
   position: absolute;
   content: '';
   height: 3px;

@@ -36,7 +36,7 @@ const Main = () => {
     setLoaded(false)
     setTimeout(() => {
       setLoaded(true)
-    }, 5000)
+    }, 2000)
   }, [])
   return <>{loaded ? <RouterProvider router={router} /> : <Loading />}</>
 }

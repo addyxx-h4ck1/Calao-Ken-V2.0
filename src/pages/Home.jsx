@@ -2,7 +2,11 @@ import React from 'react'
 import placesToVisit from '../assets/data'
 import Destination from '../components/Destination'
 import Safari from '../components/Safari'
+import { useSwiper } from 'swiper/react'
+const Slider = React.lazy(() => import('../components/Slider'))
+
 const Home = () => {
+  const swiper = useSwiper()
   return (
     <>
       <section className="slider w-full h-[80vh] mb-[2rem] portrait:h-[300px]">
@@ -118,7 +122,7 @@ const Home = () => {
         </article>
       </section>
       {/* BANNER */}
-      <section className="banner-A w-full h-[400px] portrait:h-[300px] mb-3 relative overflow-hidden flex justify-center items-center px-2">
+      <section className="banner-A w-full h-[400px] portrait:h-[300px] mb-3 relative overflow-hidden flex justify-center items-center">
         <div className="z-[1]">
           <h2 className="text-white text-4xl font-bold text-center portrait:text-2xl">
             Find Your Next Place To Visit
@@ -130,6 +134,33 @@ const Home = () => {
             <i className="fa fa-location-dot"></i>
           </h1>
         </div>
+      </section>
+      {/* SLIDER  */}
+      <section className="slider-parent relative my-6 flex flex-col justify-center items-center overflow-hidden ">
+        <h2 className="text-3xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-xl">
+          Best Safari Plans
+        </h2>
+        <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-sm px-2">
+          Lorem Ipsum is simply dummy text the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
+        <button
+          className="swiper-button-prev absolute text-lg z-50 left-[40px] top-[50%] text-white py-2 px-4 rounded-lg duration-300 hover:duration-300 hover:text-blue-600 hover:bg-transparent hover:border-2 hover:border-blue-600 bg-blue-600 portrait:hidden "
+          onClick={() => swiper.slidePrev()}
+        >
+          <i className="fa fa-caret-left"></i>
+        </button>
+
+        <button
+          className="swiper-button-next absolute text-lg z-50 right-[40px] top-[50%] text-white py-2 px-4 rounded-lg duration-300 hover:duration-300 hover:text-blue-600 hover:bg-transparent hover:border-2 hover:border-blue-600 bg-blue-600 portrait:hidden "
+          onClick={() => swiper.slideNext()}
+        >
+          <i className="fa fa-caret-right"></i>
+        </button>
+        <article className="relative overflow-hidden">
+          <Slider />
+        </article>
       </section>
     </>
   )

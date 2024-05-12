@@ -45,6 +45,13 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
   }
 
+  .mySwiper {
+    width: 100%;
+    overflow: hidden;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  }
+
   .destination img {
     position: relative;
     transition: all 0.5s ease-in-out;
@@ -146,4 +153,18 @@
     transform: rotate(-45deg);
   }
 
+  .slider-parent {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .slider-parent article {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: 100%;
+  }
 }
