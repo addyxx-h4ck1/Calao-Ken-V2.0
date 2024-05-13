@@ -4,6 +4,7 @@ import Destination from '../components/Destination'
 import Safari from '../components/Safari'
 import { useSwiper } from 'swiper/react'
 const Slider = React.lazy(() => import('../components/Slider'))
+const Reviews = React.lazy(() => import('../components/Reviews'))
 
 const Home = () => {
   const swiper = useSwiper()
@@ -25,10 +26,10 @@ const Home = () => {
       {/* ABOUT */}
       <section className="about-section flex w-full mt-2 mb-[2rem] px-6 gap-8 items-center">
         <article className="about-text w-[50%] ml-[7rem]">
-          <p className="text-blue-600 text-xl mb-2">
+          <p className="text-blue-600 text-xl portrait:text-lg mb-2">
             About Calao Kenya Safari's
           </p>
-          <h2 className="text-3xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3">
+          <h2 className="text-3xl portrait:text-2xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3">
             We're Truely Dedicated To Make Your Travel Experience As Much As
             Simple And Fun As Possible
           </h2>
@@ -53,7 +54,7 @@ const Home = () => {
         <h2 className="text-3xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-xl">
           Why Choose Us
         </h2>
-        <p className="text-center w-[60%] portrait:w-[100%] portrait:text-sm text-[#2f2d2de8] mb-[2rem] px-4">
+        <p className="text-center w-[60%] portrait:w-[100%] portrait:text-xs text-[#2f2d2de8] mb-[2rem] px-4">
           Lorem Ipsum is simply dummy text the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s,
@@ -64,7 +65,7 @@ const Home = () => {
             <h3 className="text-xl text-[#2f2d2de8] font-semibold mb-3 text-blue-600">
               Competitive Pricing
             </h3>
-            <p className="px-2">
+            <p className="px-2 text-sm text-[#242424d0]">
               With 500+ suppliers and the purchasing power of 300 million
               members
             </p>
@@ -74,7 +75,7 @@ const Home = () => {
             <h3 className="text-xl text-[#2f2d2de8] font-semibold mb-3 text-blue-600">
               Award Winning Service
             </h3>
-            <p className="px-2">
+            <p className="px-2 text-sm text-[#242424d0]">
               Fabulous Travel worry free knowing that we're here if you need us,
               24 hours a day
             </p>
@@ -84,7 +85,7 @@ const Home = () => {
             <h3 className="text-xl text-[#2f2d2de8] font-semibold mb-3 text-blue-600">
               Wide Country Coverage
             </h3>
-            <p className="px-2">
+            <p className="px-2 text-sm text-[#242424d0]">
               1,200,000 hotels in more than 200 countries and regions & flights
               to over 5,000 citites.
             </p>
@@ -107,7 +108,7 @@ const Home = () => {
         <h2 className="text-3xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-xl">
           Perfect Holiday Plan
         </h2>
-        <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-sm px-2">
+        <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-xs px-2">
           Lorem Ipsum is simply dummy text the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s,
@@ -140,7 +141,7 @@ const Home = () => {
         <h2 className="text-3xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-xl">
           Best Safari Plans
         </h2>
-        <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-sm px-2">
+        <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-xs px-2">
           Lorem Ipsum is simply dummy text the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s,
@@ -189,8 +190,8 @@ const Home = () => {
         </div>
       </section>
       {/* REVIEWS */}
-      <section className="reviews my-3 flex flex-col justify-center items-center">
-        <h2 className="text-3xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-xl">
+      <section className="reviews my-3 flex flex-col relative justify-center items-center bg-slate-100 py-3 overflow-hidden">
+        <h2 className="text-3xl font-black text-[#2f2d2de8] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-xl">
           Top Tour Reviews
         </h2>
         <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-sm px-2">
@@ -198,6 +199,22 @@ const Home = () => {
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s,
         </p>
+        <button
+          className="swiper-button-prev-rev absolute text-lg z-50 left-[40px] top-[50%] text-white py-2 px-4 rounded-lg duration-300 hover:duration-300 hover:text-blue-600 hover:bg-transparent hover:border-2 hover:border-blue-600 bg-blue-600 portrait:hidden "
+          onClick={() => swiper.slidePrev()}
+        >
+          <i className="fa fa-caret-left"></i>
+        </button>
+
+        <button
+          className="swiper-button-next-rev absolute text-lg z-50 right-[40px] top-[50%] text-white py-2 px-4 rounded-lg duration-300 hover:duration-300 hover:text-blue-600 hover:bg-transparent hover:border-2 hover:border-blue-600 bg-blue-600 portrait:hidden "
+          onClick={() => swiper.slideNext()}
+        >
+          <i className="fa fa-caret-right"></i>
+        </button>
+        <article className="">
+          <Reviews />
+        </article>
       </section>
     </>
   )
