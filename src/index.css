@@ -59,13 +59,34 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
   }
 
+  .recent-activities article {
+    width: 100%;
+    overflow: hidden;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  }
+
+  .memberships article {
+    width: 100%;
+    overflow: hidden;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .recent-activities article {
+      width: 1200px !important;
+    }
+  }
+
   .slider-parent {
     width: 100%;
     overflow: hidden;
   }
 
   .slider-parent article,
-  .reviews article {
+  .reviews article,
+  .memberships article {
     max-width: 1200px;
     width: 100%;
   }
@@ -111,6 +132,15 @@
     z-index: 1;
     transition: all ease-in-out 0.3s;
 
+  }
+
+  .activity-parent img {
+    transition: all .5s ease-in-out;
+  }
+
+  .activity-parent img:hover {
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
   }
 
   .safari-img {

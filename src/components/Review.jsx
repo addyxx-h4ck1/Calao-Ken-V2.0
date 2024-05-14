@@ -9,21 +9,23 @@ const Review = ({ ...set }) => {
           <i>{set.message}</i>
         </p>
       </div>
-      <div className="review-writter flex items-center gap-3 self-start my-3">
+      <div className="review-writter flex items-center gap-3 self-start my-3 portrait:ml-3">
         <img
           src={set.img}
           alt=""
-          className="w-[100px] h-[100px] portrait:h-[80px] portrait:w-[80px]  object-cover rounded-full border-2 border-blue-600 bg-[#242424]"
+          className="w-[100px] h-[100px] portrait:h-[50px] portrait:w-[50px]  object-cover rounded-full border-2 border-blue-600 bg-[#242424]"
         />
         <div>
           <a href={set.profile} target="_blank">
             {' '}
-            <p className="name portrait:text-sm font-semibold hover:text-blue-600 hover:underline hover:duration-300 duration-300">
+            <p className="name portrait:text-xs font-semibold text-blue-600 underline hover:duration-300 duration-300">
               {set.name}
             </p>
           </a>
-          <p className="profession text-[#242424ba]">{set.profession}</p>
-          <div className="rating inline-block portrait:text-sm">
+          <p className="profession text-[#242424ba] portrait:text-xs">
+            {set.profession}
+          </p>
+          <div className="rating inline-block portrait:text-xs">
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
