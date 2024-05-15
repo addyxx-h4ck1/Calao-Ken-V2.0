@@ -27,7 +27,6 @@ const Heroslider = () => {
           translate: ['50%', 0, 0],
         },
       }}
-      fade
       speed={10}
       modules={[Autoplay, Navigation, Pagination, EffectCreative]}
       navigation={{
