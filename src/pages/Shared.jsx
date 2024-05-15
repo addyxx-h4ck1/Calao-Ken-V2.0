@@ -1,11 +1,13 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import App from '../App'
+const App = React.lazy(() => import('../App'))
+const Footer = React.lazy(() => import('../components/Footer'))
 const Shared = () => {
   return (
     <>
       <App />
       <Outlet />
+      <Footer />
     </>
   )
 }

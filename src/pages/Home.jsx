@@ -1,10 +1,10 @@
 import React from 'react'
-import placesToVisit from '../assets/data'
-import Destination from '../components/Destination'
-import Safari from '../components/Safari'
 import { useSwiper } from 'swiper/react'
-import Activity from '../components/Activity'
-import Membership from '../components/Membership'
+import placesToVisit from '../assets/data'
+const Activity = React.lazy(() => import('../components/Activity'))
+const Destination = React.lazy(() => import('../components/Destination'))
+const Safari = React.lazy(() => import('../components/Safari'))
+const Membership = React.lazy(() => import('../components/Membership'))
 const Heroslider = React.lazy(() => import('../components/Heroslider'))
 const Slider = React.lazy(() => import('../components/Slider'))
 const Reviews = React.lazy(() => import('../components/Reviews'))
@@ -55,6 +55,31 @@ const Home = () => {
             className="w-[100%]"
           />
         </div> */}
+      </section>
+      {/* PROMO */}
+      <section className="banner-promo flex flex-col justify-center items-center my-6 mb-[3rem] ">
+        <div className="promo-wrapper flex rounded-2xl px-2">
+          <div className="promo-text w-[50%] bg-[#200b17] text-white flex flex-col justify-center items-center px-4 py-8 rounded-tl-2xl rounded-bl-2xl text-center">
+            <h2 className="text-5xl font-black text-center mb-4 leading-[4rem] ">
+              SUMMER SPECIAL UPTO <span className="text-blue-600">25%</span> OFF
+            </h2>
+            <p className="font-semibold text-xl">
+              SPEND THE BEST VACTION WITH US{' '}
+            </p>
+            <p className="mb-4 text-xl">The Nights Of Thailand</p>
+            <a
+              href=""
+              className="py-3 mb-4 px-8 bg-transparent rounded-lg  text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:duration-700 duration-700 ease-in-out"
+            >
+              Book Now
+            </a>
+          </div>
+          <img
+            src="https://www.congosafaristours.com/wp-content/uploads/2020/10/Nairobi-National-Park.jpg"
+            alt=""
+            className="w-[50%] object-cover rounded-tr-2xl rounded-br-2xl"
+          />
+        </div>
       </section>
       {/* ACKNOWLEDGEMENTS  */}
       <section className="acknowledgement flex flex-col justify-center w-full items-center  mb-[3rem] flex-wrap">
@@ -174,7 +199,7 @@ const Home = () => {
       {/* PROMO */}
       <section className="banner-promo flex flex-col justify-center items-center my-6 mb-[3rem] ">
         <div className="promo-wrapper flex rounded-2xl px-2">
-          <div className="promo-text w-[50%] bg-[#242424] text-white flex flex-col justify-center items-center px-4 py-8 rounded-tl-2xl rounded-bl-2xl text-center">
+          <div className="promo-text w-[50%] bg-[#200b17] text-white flex flex-col justify-center items-center px-4 py-8 rounded-tl-2xl rounded-bl-2xl text-center">
             <h2 className="text-5xl font-black text-center mb-4 leading-[4rem] ">
               SUMMER SPECIAL UPTO <span className="text-blue-600">25%</span> OFF
             </h2>
@@ -244,15 +269,15 @@ const Home = () => {
       </section>
       {/* MEMBERSHIPS */}
       <section className="memberships mb-[3rem] flex-col flex justify-center items-center">
-        <h2 className="text-3xl font-black text-[#2f2d2de8] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-2xl">
-          Our Awesome Memberships
+        <h2 className="text-3xl font-black text-[#2f2d2de8] mb-5 text-center flex flex-col relative pb-[1rem] portrait:text-2xl">
+          Memberships
         </h2>
         <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[1rem] portrait:text-xs px-2">
           Lorem Ipsum is simply dummy text the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s,
         </p>
-        <article className="">
+        <article className="mt-5">
           <Membership />
         </article>
       </section>

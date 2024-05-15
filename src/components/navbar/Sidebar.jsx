@@ -63,12 +63,12 @@ const Sidebar = ({ closeFunction }) => {
         {/* dropDown */}
         <a
           href=""
-          className="py-3  px-5 bg-blue-600 rounded-lg text-white text-center hover:border-2 hover:bg-transparent hover:text-blue-600 hover:border-blue-600 hover:duration-700 mx-5"
+          className="py-3  px-5 bg-blue-600 rounded-lg text-white text-center hover:border-2 hover:bg-transparent hover:text-blue-600 hover:border-blue-600 hover:duration-700 mx-5 duration-700"
         >
           Book Safari
         </a>
         {/* CONTACT */}
-        <section className="w-full bg-[#242424] p-3 px-5 text-white pb-7 rounded-lg flex flex-col justify-center relative">
+        <section className="w-full bg-[#200b17] p-3 px-5 text-white pb-7 rounded-lg flex flex-col justify-center relative">
           <h2 className="font-serif font-semibold text-sm">Get In Touch</h2>
           <p className="text-wrap my-3 text-xs">
             We must explain to you how all seds this mistakens idea off
