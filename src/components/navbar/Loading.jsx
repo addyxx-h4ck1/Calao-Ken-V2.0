@@ -10,7 +10,6 @@ const Loading = () => {
         aria-label="Loading Spinner"
         data-testid="loader"
       />
-      <h1>WELCOME</h1>
     </div>
   )
 }

@@ -8,9 +8,11 @@ import { useParams } from 'react-router-dom'
 const Safari = () => {
   const [data, setData] = useState()
   const { ID } = useParams()
+  console.log(data)
   useEffect(() => {
     const safariData = allSafaris.find((el) => el.ID === ID)
     setData(safariData)
+    document.title = safariData.destinations
   }, [])
   return (
     <>
@@ -41,11 +43,11 @@ const Safari = () => {
           {/* SAFARI HEADER */}
           <section className="main-bg h-[250px] relative overflow-hidden">
             <div className="main-bg-wrapper  h-full bg-[#200b17b6] flex flex-col justify-center items-center text-white text-3xl z-[1]  relative">
-              <h1 className="relative text-center">
-                Park Avenue Baker Street London
+              <h1 className="relative text-center portrait:text-xl">
+                {data.top}
               </h1>
-              <p className="text-lg mt-3 relative ">
-                Home / <span className="text-[gray]">{'Nairobi-Kenya'}</span>
+              <p className="text-sm mt-3 relative ">
+                Home / <span className="text-[gray] ">{'safari'}</span>
               </p>
             </div>
           </section>
@@ -54,12 +56,12 @@ const Safari = () => {
             <div className="main-section-wrapper">
               <article className="article-left portrait:text-sm">
                 <h1 className="text-3xl portrait:text-lg">
-                  Park Avenue Baker Street London
+                  {data.destinations}
                 </h1>
                 {/*  */}
                 <div className="safari-headers flex flex-wrap gap-2 text-[gray] items-center mt-3">
                   <p>
-                    <i className="fa fa-location-dot"></i> {'Lake Naivasha'}
+                    <i className="fa fa-location-dot"></i> {data.top}
                   </p>
                   <a href="" className="text-blue-600">
                     View on map
@@ -82,12 +84,12 @@ const Safari = () => {
                 </div>
                 {/*  */}
                 <div className="safari-bars flex gap-2 text-[gray] mt-3 flex-wrap w-full">
-                  <button className="py-3 px-6 border-[1px] rounded-lg text-sm">
+                  <button className="py-3 px-6 border-[1px] rounded-lg portrait:text-sm">
                     <i className="fa fa-clock text-blue-600"></i>{' '}
-                    {'5 days & 4 nights'}
+                    {data.duration}
                   </button>
-                  <button className="py-3 px-6 border-[1px] rounded-lg duration-300 bg-blue-600 hover:bg-transparent hover:border-blue-600 hover:text-blue-600 text-white text-sm">
-                    <a href="">Book Safari</a>
+                  <button className="py-3 px-6 border-[1px] rounded-lg duration-300 bg-blue-600 hover:bg-transparent hover:border-blue-600 hover:text-blue-600 text-white portrait:text-sm">
+                    <a href="#book">Book Safari</a>
                     <i className="fa fa-caret-down  ml-2"></i>{' '}
                   </button>
                 </div>
@@ -95,17 +97,7 @@ const Safari = () => {
                 <div className="safari-description mt-8">
                   <h3 className="text-xl portrait:text-lg">Description </h3>
                   <p className="mt-2 text-[#515050] portrait:text-sm">
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                    text used in laying out print, graphic or web designs. The
-                    passage is attributed to an unknown typesetter in the 15th
-                    century who is thought to have scrambled parts of Cicero's
-                    De Finibus Bonorum et Malorum for use in a type specimen
-                    book.Lorem ipsum, or lipsum as it is sometimes known, is
-                    dummy text used in laying out print, graphic or web
-                    designs.The passage is attributed to an unknown typesetter
-                    in the 15th century who is thought to have scrambled parts
-                    of Cicero's De Finibus Bonorum et Malorum for use in a type
-                    specimen book.
+                    {data.description}
                   </p>
                 </div>
               </article>
@@ -113,10 +105,9 @@ const Safari = () => {
               <article className="aside-wrapper mt-8 flex justify-between portrait:flex-col  gap-8">
                 <div className="itineraries">
                   <h3 className="text-xl portrait:text-lg mb-3">Itinerary</h3>
-                  <Accordion />
-                  <Accordion />
-                  <Accordion />
-                  <h1>Hello world</h1>
+                  {data.itinerary.map((itinerary) => {
+                    return <Accordion key={data.itinerary} {...itinerary} />
+                  })}
                 </div>
                 <aside className="aside w-[100%] flex flex-col gap-3">
                   {/* MAP */}

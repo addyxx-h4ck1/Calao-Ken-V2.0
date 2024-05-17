@@ -17,7 +17,7 @@ const Slidercontent = ({ ...safari }) => {
         <h3 className="mt-1 font-bold portrait:text-sm line-clamp-3">
           {safari.destinations}
         </h3>
-        <p className="py-2 border-b-2 border-dashed border-[#4b4a4a24] text-sm line-clamp-3">
+        <p className="py-2 border-b-2 border-dashed border-[#4b4a4a24] text-sm portrait:text-xs line-clamp-3">
           {safari.description}
         </p>
         <button className="py-3 text-blue-600 font-semibold portrait:py-2 portrait:text-sm ">

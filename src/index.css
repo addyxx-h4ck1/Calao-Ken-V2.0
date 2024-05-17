@@ -107,6 +107,20 @@
     }
   }
 
+  @media screen and (max-width: 768px) {
+
+    .aside-wrapper {
+      flex-direction: column !important;
+    }
+  }
+
+  @media screen and (min-width: 906px) {
+
+    .accordion {
+      width: 600px !important;
+    }
+  }
+
   /* SAFARI PAGE */
   @media screen and (min-width: 1200px) {
 
@@ -115,12 +129,6 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
-
-    .aside-wrapper {
-      flex-direction: column !important;
-    }
-  }
 
   .footer-wrapper {
     width: 100%;

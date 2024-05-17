@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-const Accordion = () => {
+const Accordion = ({ ...itinerary }) => {
+  console.log(itinerary)
   const [showAccordion, setShowAccordion] = useState(false)
   return (
     <div className="accordion flex flex-col bg-[#f9f9f9e0] rounded-lg justify-between it w-[100%] p-4 mb-2">
@@ -16,8 +17,8 @@ const Accordion = () => {
           }`}
         ></span>
 
-        <span className="font-semibold text-[#242424] portrait:text-sm">
-          Lorem ipsum dolor sit amet
+        <span className="font-semibold text-[#242424] text-sm portrait:text-xs text-left">
+          {itinerary.day}
         </span>
       </button>
       <div
@@ -27,11 +28,8 @@ const Accordion = () => {
             : `grid-rows-[0fr] opacity-0 mt-0`
         }`}
       >
-        <div className="overflow-hidden text-gray-700 portrait:text-sm ">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum
-          nesciunt saepe at laborum totam accusamus odit! Saepe beatae accusamus
-          aperiam at odit quod, minus, distinctio molestias amet est officiis
-          fuga.
+        <div className="overflow-hidden text-gray-700 portrait:text-sm text-justify">
+          {itinerary.detail}
         </div>
       </div>
     </div>

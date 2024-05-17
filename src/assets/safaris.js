@@ -219,7 +219,7 @@ export const allSafaris = [
     ],
   },
   {
-    ID: 'a619606bbc5842f88634ff73276c7741',
+    ID: '',
     top: 'Mount Longonot, Aberdaires & L. Nakuru',
     img: 'https://ik.imagekit.io/uimqpalyw/calao%20kenya%20safaris/images/safaris/safari5.jpg?updatedAt=1696987963809',
     duration: '11 days & 10 nights',
