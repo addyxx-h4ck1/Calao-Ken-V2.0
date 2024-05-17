@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSwiper } from 'swiper/react'
 import placesToVisit from '../assets/data'
+import { allSafaris } from '../assets/safaris'
 const Activity = React.lazy(() => import('../components/Activity'))
 const Destination = React.lazy(() => import('../components/Destination'))
 const Safari = React.lazy(() => import('../components/Safari'))
@@ -8,9 +9,11 @@ const Membership = React.lazy(() => import('../components/Membership'))
 const Heroslider = React.lazy(() => import('../components/Heroslider'))
 const Slider = React.lazy(() => import('../components/Slider'))
 const Reviews = React.lazy(() => import('../components/Reviews'))
+const ShortSafaris = React.lazy(() => import('../components/ShortSafaris'))
 
 const Home = () => {
   const swiper = useSwiper()
+
   return (
     <>
       <section className="main-slider relative bg-[#242424]">
@@ -75,7 +78,7 @@ const Home = () => {
             </a>
           </div>
           <img
-            src="https://www.congosafaristours.com/wp-content/uploads/2020/10/Nairobi-National-Park.jpg"
+            src="https://images.unsplash.com/photo-1628961204673-6d1f395deb61?q=80&w=1495&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="w-[50%] object-cover rounded-tr-2xl rounded-br-2xl"
           />
@@ -146,12 +149,7 @@ const Home = () => {
           since the 1500s,
         </p>
         <article className="safari-listings portrait:gap-4 overflow-hidden xl:w-[80%]">
-          <Safari />
-          <Safari />
-          <Safari />
-          <Safari />
-          <Safari />
-          <Safari />
+          <ShortSafaris />
         </article>
       </section>
       {/* BANNER */}
@@ -171,7 +169,7 @@ const Home = () => {
       {/* SLIDER  */}
       <section className="slider-parent relative my-6 flex flex-col justify-center items-center overflow-hidden mb-[3rem] ">
         <h2 className="text-3xl font-black text-[#2f2d2de8]  leading-[3rem] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-xl">
-          Best Safari Plans
+          Calao Adventures
         </h2>
         <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-xs px-2">
           Lorem Ipsum is simply dummy text the printing and typesetting
@@ -193,7 +191,7 @@ const Home = () => {
         </button>
         <article className="relative overflow-hidden">
           {/* SLIDES */}
-          <Slider />
+          <Slider safariData={allSafaris} />
         </article>
       </section>
       {/* PROMO */}
@@ -215,7 +213,7 @@ const Home = () => {
             </a>
           </div>
           <img
-            src="https://www.congosafaristours.com/wp-content/uploads/2020/10/Nairobi-National-Park.jpg"
+            src="https://images.unsplash.com/photo-1547471080-ee21d874bc8a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="w-[50%] object-cover rounded-tr-2xl rounded-br-2xl"
           />

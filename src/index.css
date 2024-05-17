@@ -74,6 +74,40 @@
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
   }
 
+  /* SAFARI PAGE */
+  .main-section-wrapper {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .main-bg {
+    background-color: #242424;
+  }
+
+  .main-bg:after {
+    background: url(https://plus.unsplash.com/premium_photo-1664301461045-0cc0eb0de316?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
+    background-position: center;
+    animation: kbrns_zoomInOut 15s linear 0s infinite alternate;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+  }
+
+  @keyframes kbrns_zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
+  /* SAFARI PAGE */
   @media screen and (min-width: 1200px) {
 
     .recent-activities article {
@@ -81,12 +115,12 @@
     }
   }
 
-  /* @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 768px) {
 
-    .footer-wrapper {
-      width: 1300px !important;
+    .aside-wrapper {
+      flex-direction: column !important;
     }
-  } */
+  }
 
   .footer-wrapper {
     width: 100%;

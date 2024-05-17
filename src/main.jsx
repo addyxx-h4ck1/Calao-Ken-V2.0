@@ -7,6 +7,7 @@ const About = lazy(() => import('./pages/About.jsx'))
 const Shared = lazy(() => import('./pages/Shared.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
 const Home = lazy(() => import('./pages/Home.jsx'))
+import Safari from './pages/Safari.jsx'
 const Loading = lazy(() => import('./components/navbar/Loading.jsx'))
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '/safari/:ID',
+        element: <Safari />,
       },
     ],
   },

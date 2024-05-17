@@ -3,6 +3,10 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 #root {
   max-width: 1500px;
   justify-self: center;
@@ -106,6 +110,18 @@ body {
   right: 0;
   margin: 0 auto;
   bottom: 0;
+}
+
+.book-by-whatsapp h2::after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 60px;
+  background: #10ff10;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0
 }
 
 footer h2::after {
