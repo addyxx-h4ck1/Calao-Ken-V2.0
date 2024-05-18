@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSwiper } from 'swiper/react'
 import placesToVisit from '../assets/data'
+import { recentActivity } from '../assets/activity'
 import { allSafaris } from '../assets/safaris'
 const Activity = React.lazy(() => import('../components/Activity'))
 const Destination = React.lazy(() => import('../components/Destination'))
@@ -246,27 +247,8 @@ const Home = () => {
           <Reviews />
         </article>
       </section>
-      {/*  */}
-      <section className="recent-activities mb-[3rem] mt-[3rem] flex flex-col justify-center items-center">
-        <h2 className="text-3xl font-black text-[#2f2d2de8] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-2xl">
-          Recent Activities
-        </h2>
-        {/* <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-sm px-2">
-          Lorem Ipsum is simply dummy text the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,
-        </p> */}
-        <article className="mt-6 landscape::w-[80%]">
-          <Activity />
-          <Activity />
-          <Activity />
-          <Activity />
-          <Activity />
-          <Activity />
-        </article>
-      </section>
       {/* MEMBERSHIPS */}
-      <section className="memberships mb-[3rem] flex-col flex justify-center items-center">
+      <section className="memberships my-[3rem] flex-col flex justify-center items-center">
         <h2 className="text-3xl font-black text-[#2f2d2de8] mb-5 text-center flex flex-col relative pb-[1rem] portrait:text-2xl">
           Memberships
         </h2>
@@ -277,6 +259,22 @@ const Home = () => {
         </p>
         <article className="mt-5">
           <Membership />
+        </article>
+      </section>
+      {/*  */}
+      <section className="recent-activities mt-[3rem] flex flex-col justify-center items-center bg-slate-100 py-6">
+        <h2 className="text-3xl font-black text-[#2f2d2de8] mb-3 text-center flex flex-col relative pb-[1rem] portrait:text-2xl">
+          Recent Activities
+        </h2>
+        {/* <p className="text-center w-[60%] portrait:w-[100%] text-[#2f2d2de8] mb-[2rem] portrait:text-sm px-2">
+          Lorem Ipsum is simply dummy text the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p> */}
+        <article className="mt-6 landscape::w-[80%]">
+          {recentActivity.map((activity) => {
+            return <Activity key={activity.date} {...activity} />
+          })}
         </article>
       </section>
     </>
